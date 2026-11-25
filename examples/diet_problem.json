@@ -1,0 +1,13 @@
+{
+  "name": "Small diet cost example",
+  "sense": "min",
+  "variables": ["food_a", "food_b"],
+  "objective": [0.5, 0.8],
+  "constraints": [
+    {"coefficients": [2, 1], "sense": ">=", "rhs": 8},
+    {"coefficients": [1, 3], "sense": ">=", "rhs": 12},
+    {"coefficients": [1, 0], "sense": "<=", "rhs": 10},
+    {"coefficients": [0, 1], "sense": "<=", "rhs": 10}
+  ],
+  "bounds": "nonnegative"
+}

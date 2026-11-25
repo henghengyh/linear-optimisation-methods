@@ -1,0 +1,10 @@
+{
+  "name": "Unbounded growth example",
+  "sense": "max",
+  "variables": ["x1", "x2"],
+  "objective": [1, 1],
+  "constraints": [
+    {"coefficients": [1, -1], "sense": "<=", "rhs": 2}
+  ],
+  "bounds": "nonnegative"
+}
