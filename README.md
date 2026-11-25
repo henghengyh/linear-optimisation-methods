@@ -23,9 +23,7 @@ The repository structure and implementation plan are defined. Features below des
 
 The initial scope is linear programs in standard form:
 
-\[
-\text{maximize } c^T x \quad \text{subject to } Ax = b,\; x \ge 0.
-\]
+``maximize cᵀx subject to Ax = b, x ≥ 0.``
 
 The project will document how supported input forms are converted to standard form, including handling of constraint directions and right-hand-side signs. The implementation and documentation will make clear which forms are supported as development progresses.
 
