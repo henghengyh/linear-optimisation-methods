@@ -32,4 +32,6 @@ Mathematically, each row is interpreted as
 
 ## Current implementation boundary
 
-At this setup stage, the package validates input and the command line confirms whether a JSON file is structurally valid. The optimization algorithms have not been implemented yet, so the example results above are mathematical expected results, not output produced by the program.
+At this setup stage, the package parses input and the command line confirms whether a JSON file is structurally valid. `parser.py` is the boundary for untrusted problem definitions: it checks required fields, finite numeric values, and compatible dimensions, then returns a `StandardLP` containing `A`, `b`, and `c` as `float64` NumPy arrays. This is a "parse, don't validate" interface for downstream code: consumers receive canonical, validated data rather than repeatedly interpreting JSON structures.
+
+`Tableau.__init__` also applies `np.asarray(..., dtype=np.float64)` to its inputs. This keeps direct construction convenient for tests and other callers that use Python lists, and ensures in-place pivot arithmetic uses floating point values. Creating a combined tableau should copy source arrays so pivoting cannot mutate the parsed problem data. The optimization algorithms have not been implemented yet, so the example results above are mathematical expected results, not output produced by the program.

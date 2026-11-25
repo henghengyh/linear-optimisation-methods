@@ -16,7 +16,7 @@ def main() -> int:
     except ProblemFormatError as exc:
         print(f"Invalid problem: {exc}", file=sys.stderr)
         return 2
-    print(f"Valid problem: {problem['name']} ({problem['sense']}, {len(problem['objective'])} variables)")
+    print(f"Valid problem: {problem.name} ({problem.sense}, {len(problem.c)} variables)")
     print("Solver implementation is not available yet.")
     return 0
 
