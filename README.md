@@ -69,9 +69,9 @@ simplex-solver/
 
 ### Stage 1: Project foundation
 
-- [ ] Set up the `src`-based Python package and project metadata.
-- [ ] Define the JSON input format and validate problem data.
-- [ ] Add example problems and document their expected results.
+- [x] Set up the `src`-based Python package and project metadata.
+- [x] Define the JSON input format and validate problem data.
+- [x] Add example problems and document their expected results.
 
 ### Stage 2: Simplex Method
 
